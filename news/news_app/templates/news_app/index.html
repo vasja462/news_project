@@ -1,0 +1,17 @@
+
+{% extends 'news_app/base.html' %}
+
+{% block title %}
+Все новости
+{% endblock %}
+
+{% block content %}
+<h2>Список новостей</h2>
+<ul>
+{% for new in news %}
+{% if new.activate %}
+    <li><a href="/new/{{new.id}}"> {{ new.name }}</a> {{new.created_at}}</li>
+{% endif %}
+    {% endfor %}
+</ul>
+{% endblock%}
