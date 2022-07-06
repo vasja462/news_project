@@ -5,7 +5,7 @@ from django.db.models import QuerySet
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
     # поля, которые будут отображаться
-    list_display = ['name', 'activate', 'category']
+    list_display = ['name', 'activate']
     # поля, которые можно редактировать
     list_editable = ['activate']
     # сортировка
